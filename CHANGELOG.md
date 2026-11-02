@@ -6,6 +6,8 @@ All notable changes to My Maestro AI are recorded here. The format follows
 
 ## [Unreleased]
 
+- **Telegram: pin a sender to one agent.** A sender in the Telegram allow-list can carry an `agent`. Their messages then always go to that agent, an `@agent` prefix no longer switches, and `/start` names the agent. Useful when several people share one bot, for example each child reaching only their own tutor. Set it with `POST /api/comms/telegram/senders` `{ add: { id, name, role, agent } }` (`agent: null` unpins); the agent must be in the channel's `agents`.
+
 ## [5.8.1] - 2026-10-28
 
 One change since 5.8.0: install My Maestro AI as an app on your computer, with the Maestro icon. Press Update in your Maestro to get it; on 5.7.0 or later it also tells you when an update is ready.
